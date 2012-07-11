@@ -1,0 +1,28 @@
+[Eagle]
+Version="06 02 00"
+Platform="Windows"
+Serial="62191E841E-LSR-WLM-1EL"
+Globals="Globals"
+Desktop="Desktop"
+
+[Globals]
+AutoSaveProject=1
+UsedLibrary="X:/Projects/EagleCad/lbr/LilyPad-Wearables.lbr"
+UsedLibrary="X:/Projects/EagleCad/lbr/SparkFun.lbr"
+UsedLibrary="X:/Projects/EagleCad/lbr/TI_MSP430_v16.lbr"
+UsedLibrary="X:/Projects/EagleCad/lbr/adafruit.lbr"
+UsedLibrary="X:/Projects/EagleCad/lbr/bourns.lbr"
+UsedLibrary="X:/Projects/EagleCad/lbr/dp_devices.lbr"
+UsedLibrary="X:/Projects/EagleCad/lbr/kevin.lbr"
+UsedLibrary="C:/Program Files/EAGLE-6.2.0/lbr/74ac-logic.lbr"
+UsedLibrary="C:/Program Files/EAGLE-6.2.0/lbr/jump-0r-smd.lbr"
+
+[Win_1]
+Type="Control Panel"
+Loc="3346 58 4506 679"
+State=2
+Number=0
+
+[Desktop]
+Screen="4640 996"
+Window="Win_1"

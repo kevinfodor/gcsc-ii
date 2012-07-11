@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model version="2.1.02" framework="qpc">
+ <package name="AOs" stereotype="0x02">
+  <class name="Trigger" superclass="qpc::QActive">
+   <operation name="state" type="uint8_t" visibility="0x00" properties="0x00"/>
+   <statechart>
+    <initial target="../3">
+     <initial_glyph conn="23,7,4,0,5">
+      <action box="0,-2,6,2"/>
+     </initial_glyph>
+    </initial>
+    <state name="pressed">
+     <tran trig="INACTIVE" target="../../2">
+      <tran_glyph conn="51,47,3,1,-18">
+       <action box="-6,-2,6,2"/>
+      </tran_glyph>
+     </tran>
+     <state_glyph node="51,42,20,11"/>
+    </state>
+    <state name="releasing">
+     <entry brief="count=0"/>
+     <tran trig="ACTIVE" target="../../1">
+      <tran_glyph conn="33,50,1,3,18">
+       <action box="0,-2,6,2"/>
+      </tran_glyph>
+     </tran>
+     <tran trig="INACTIVE">
+      <action brief="count++"/>
+      <choice guard="else">
+       <choice_glyph conn="23,32,5,-1,-9">
+        <action box="-6,-2,6,2"/>
+       </choice_glyph>
+      </choice>
+      <choice guard="count==DEBOUNCE_INACTIVE_COUNT" target="../../../3">
+       <choice_glyph conn="23,32,4,2,-9">
+        <action box="1,-5,26,2"/>
+       </choice_glyph>
+      </choice>
+      <tran_glyph conn="23,42,0,-1,-10">
+       <action box="1,-2,14,2"/>
+      </tran_glyph>
+     </tran>
+     <state_glyph node="13,42,20,11">
+      <entry box="1,2,10,2"/>
+     </state_glyph>
+    </state>
+    <state name="not_pressed">
+     <tran trig="ACTIVE" target="../../4">
+      <tran_glyph conn="33,16,1,3,18">
+       <action box="0,-2,11,2"/>
+      </tran_glyph>
+     </tran>
+     <state_glyph node="13,12,20,11"/>
+    </state>
+    <state name="pressing">
+     <entry brief="count=0"/>
+     <tran trig="INACTIVE" target="../../3">
+      <tran_glyph conn="51,19,3,1,-18">
+       <action box="-6,-2,6,2"/>
+      </tran_glyph>
+     </tran>
+     <tran trig="ACTIVE">
+      <action brief="count++"/>
+      <choice guard="else">
+       <choice_glyph conn="61,32,5,-1,9">
+        <action box="2,-2,6,2"/>
+       </choice_glyph>
+      </choice>
+      <choice guard="count==DEBOUNCE_ACTIVE_COUNT" target="../../../1">
+       <choice_glyph conn="61,32,4,0,10">
+        <action box="1,2,25,2"/>
+       </choice_glyph>
+      </choice>
+      <tran_glyph conn="61,23,2,-1,9">
+       <action box="1,0,13,2"/>
+      </tran_glyph>
+     </tran>
+     <state_glyph node="51,12,20,11">
+      <entry box="1,2,12,2"/>
+     </state_glyph>
+    </state>
+    <state_diagram size="98,81"/>
+   </statechart>
+  </class>
+  <class name="Signal" superclass="qpc::QActive">
+   <statechart>
+    <initial target="../2">
+     <initial_glyph conn="12,3,4,0,5">
+      <action box="0,-2,6,2"/>
+     </initial_glyph>
+    </initial>
+    <state name="on">
+     <initial target="../3">
+      <initial_glyph conn="35,11,4,0,3">
+       <action box="0,-2,6,2"/>
+      </initial_glyph>
+     </initial>
+     <tran trig="PRESSED" target="../../2">
+      <tran_glyph conn="30,33,3,2,-18,-13">
+       <action box="-7,0,6,2"/>
+      </tran_glyph>
+     </tran>
+     <tran trig="CLOCK_TICK">
+      <choice guard="else">
+       <action brief="bell_to--"/>
+       <choice_glyph conn="44,42,4,-1,7">
+        <action box="1,3,11,2"/>
+       </choice_glyph>
+      </choice>
+      <choice guard="bell_to=EXPIRED">
+       <action brief="bell=off"/>
+       <choice_glyph conn="44,42,5,-1,20">
+        <action box="2,-2,19,2"/>
+       </choice_glyph>
+      </choice>
+      <tran_glyph conn="30,42,3,-1,14">
+       <action box="1,-2,10,2"/>
+      </tran_glyph>
+     </tran>
+     <state name="lamp1">
+      <entry brief="init">lamp1=on;lamp2=off;bell=on;lamp_to=LAMP_TIMEOUT;bell_to=BELL_TIMEOUT</entry>
+      <tran trig="CLOCK_TICK">
+       <choice guard="else">
+        <action brief="lamp_to--"/>
+        <choice_glyph conn="58,17,4,-1,5">
+         <action box="1,2,12,2"/>
+        </choice_glyph>
+       </choice>
+       <choice guard="lamp_to=EXPIRED" target="../../../4">
+        <choice_glyph conn="58,17,5,3,16">
+         <action box="1,-2,14,2"/>
+        </choice_glyph>
+       </choice>
+       <tran_glyph conn="46,17,1,-1,12">
+        <action box="1,-2,9,2"/>
+       </tran_glyph>
+      </tran>
+      <state_glyph node="32,14,14,17">
+       <entry box="1,2,8,2"/>
+      </state_glyph>
+     </state>
+     <state name="lamp2">
+      <entry brief="init">lamp1=off;lamp2=on;bell=on;lamp_to=LAMP_TIMEOUT;bell_to=BELL_TIMEOUT</entry>
+      <tran trig="CLOCK_TICK">
+       <choice guard="lamp_to=EXPIRED" target="../../../3">
+        <choice_glyph conn="62,27,5,1,-16">
+         <action box="-13,-2,13,2"/>
+        </choice_glyph>
+       </choice>
+       <choice guard="else">
+        <action brief="lamp_to--"/>
+        <choice_glyph conn="62,27,4,-1,5">
+         <action box="1,2,12,2"/>
+        </choice_glyph>
+       </choice>
+       <tran_glyph conn="74,27,3,-1,-12">
+        <action box="-9,-2,10,2"/>
+       </tran_glyph>
+      </tran>
+      <state_glyph node="74,13,14,17">
+       <entry box="1,2,10,2"/>
+      </state_glyph>
+     </state>
+     <state_glyph node="30,8,60,45"/>
+    </state>
+    <state name="off">
+     <entry brief="lamp1=off;\lamp2=off;\bell=off"/>
+     <tran trig="PRESSED" target="../../1">
+      <tran_glyph conn="20,13,1,3,10">
+       <action box="1,-2,6,2"/>
+      </tran_glyph>
+     </tran>
+     <state_glyph node="4,8,16,12">
+      <entry box="1,2,12,6"/>
+     </state_glyph>
+    </state>
+    <state_diagram size="96,69"/>
+   </statechart>
+  </class>
+ </package>
+</model>

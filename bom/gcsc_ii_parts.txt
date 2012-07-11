@@ -1,0 +1,47 @@
+Partlist
+
+Exported from gcsc_ii.sch at 5/1/2012 7:53:26 AM
+
+EAGLE Version 6.2.0 Copyright (c) 1988-2012 CadSoft
+
+Assembly variant: 
+
+Part       Value          Device             Package             Library  Sheet
+
+BELL.OUT   BELL           LSP10              LSP10               kevin    1
+C1         22uF           CPOL-USFR-5        E2-5                kevin    1
+C2         220uF          CPOL-USFR-6,3      E2,5-6,3            kevin    1
+C3         0.1uF          C-USC025-024X044   C025-024X044        kevin    1
+D1         1N5819         SCHOTTKY-DIODEDO41 DO41-10             kevin    1
+D2         1N5819         SCHOTTKY-DIODEDO41 DO41-10             kevin    1
+D3         1N5819         SCHOTTKY-DIODEDO41 DO41-10             kevin    1
+GP2        GP2            SJ_CLOSED          SJ_2S-TRACE         kevin    1
+GP3        GP3            SJ_CLOSED          SJ_2S-TRACE         kevin    1
+GP4        GP4            SJ_CLOSED          SJ_2S-TRACE         kevin    1
+GP5        GP5            SJ_CLOSED          SJ_2S-TRACE         kevin    1
+IC1        LM2574N-2-5.0  LM2574N-2-5.0      DIL8                kevin    1
+IC2        LTV-816        LTV816             DIL04               kevin    1
+IC3        PIC12C508JN    PIC12C508JN        DIL8                kevin    1
+ICSP       PIC_ICSP_RA    PIC_ICSP_RA        PIC_ICSP            kevin    1
+J1         MAST           KK-156-8-RA        KK-156-8-RA         kevin    1
+J2         POWER          KK-156-2RA         KK-156-2-RA         kevin    1
+J3         IC3_1-4        M04LOCK            1X04_LOCK           kevin    1
+J4         IC3_5-8        M04LOCK            1X04_LOCK           kevin    1
+J5         EXT            M03POLAR_LOCK      MOLEX-1X3_LOCK      kevin    1
+L1         680uH          RLB0608            RLB0608             kevin    1
+LAMP1.OUT  LAMP1          LSP10              LSP10               kevin    1
+LAMP2.OUT  LAMP2          LSP10              LSP10               kevin    1
+LED1       SSL-LX3044GD   LED3MM             LED3MM              kevin    1
+LED2       SSL-LX3044HD   LED3MM             LED3MM              kevin    1
+LED3       SSL-LX3044HD   LED3MM             LED3MM              kevin    1
+LED4       SSL-LX3044HD   LED3MM             LED3MM              kevin    1
+Q1         NTD4906N-35G   NTD4906N           I-PAK_STRAIGHT_LEAD kevin    1
+Q2         NTD4906N-35G   NTD4906N           I-PAK_STRAIGHT_LEAD kevin    1
+Q3         NTD4906N-35G   NTD4906N           I-PAK_STRAIGHT_LEAD kevin    1
+R1         1k             R-US0207/10        0207/10             kevin    1
+R2         10k            R-US0207/10        0207/10             kevin    1
+R3         1k             R-US0207/10        0207/10             kevin    1
+R4         1k             R-US0207/10        0207/10             kevin    1
+R5         1k             R-US0207/10        0207/10             kevin    1
+R6         1k             R-US0207/10        0207/10             kevin    1
+TRIGGER.IN TRIGGER        LSP10              LSP10               kevin    1
