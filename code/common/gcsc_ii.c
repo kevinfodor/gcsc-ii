@@ -156,8 +156,8 @@ void gcsc_ii(void) {
                     // Load long-press timeout
                     lpress_cnt = LONG_PRESS_TIMEOUT_COUNT;
 
-                    // go into 'short-press' timed mode
-                    state = controller_short;
+                    // go into 'long-press' non-timed mode
+                    state = controller_long;
                 }
 
                 break;
