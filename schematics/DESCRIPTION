@@ -1,4 +1,7 @@
 <language en>
 Grade Crossing Signal Controller - II
-Revision B
+Revision B.1
+No electrical changes.
+Upgrade to Eagle 6.5.0
+Cleaned-up silkscreen and some traces.
 </language en>
