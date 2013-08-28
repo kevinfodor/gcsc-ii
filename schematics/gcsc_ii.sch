@@ -4059,6 +4059,7 @@ This is the mechanical footprint for a #4 phillips button head screw. Use the ke
 </library>
 </libraries>
 <attributes>
+<attribute name="DATABASE" value="C:\projects\common\EagleCad\ulp\PARTSDB.txt"/>
 </attributes>
 <variantdefs>
 </variantdefs>
@@ -4167,14 +4168,18 @@ This is the mechanical footprint for a #4 phillips button head screw. Use the ke
 </part>
 <part name="GND3" library="supply1" deviceset="GND" device=""/>
 <part name="J5" library="kevin" deviceset="M03" device="POLAR_LOCK" value="EXT">
+<attribute name="BOM" value="INCLUDE"/>
+<attribute name="DNP" value="F"/>
 <attribute name="PARTNO" value="22-27-2031"/>
 </part>
 <part name="GND4" library="supply1" deviceset="GND" device=""/>
 <part name="J3" library="kevin" deviceset="M04" device="LOCK" value="IC3_1-4">
+<attribute name="BOM" value="EXCLUDE"/>
 <attribute name="DNP" value="T"/>
 <attribute name="PARTNO" value="22-28-4042"/>
 </part>
 <part name="J4" library="kevin" deviceset="M04" device="LOCK" value="IC3_5-8">
+<attribute name="BOM" value="EXCLUDE"/>
 <attribute name="DNP" value="T"/>
 <attribute name="PARTNO" value="22-28-4042"/>
 </part>
@@ -4195,18 +4200,22 @@ This is the mechanical footprint for a #4 phillips button head screw. Use the ke
 <attribute name="DNP" value="T"/>
 </part>
 <part name="LAMP2.OUT" library="kevin" deviceset="LSP10" device="" value="LAMP2">
+<attribute name="BOM" value="EXCLUDE"/>
 <attribute name="DNP" value="T"/>
 <attribute name="PARTNO" value="22-28-4012"/>
 </part>
 <part name="LAMP1.OUT" library="kevin" deviceset="LSP10" device="" value="LAMP1">
+<attribute name="BOM" value="EXCLUDE"/>
 <attribute name="DNP" value="T"/>
 <attribute name="PARTNO" value="22-28-4012"/>
 </part>
 <part name="TRIGGER.IN" library="kevin" deviceset="LSP10" device="" value="TRIGGER">
+<attribute name="BOM" value="EXCLUDE"/>
 <attribute name="DNP" value="T"/>
 <attribute name="PARTNO" value="22-28-4012"/>
 </part>
 <part name="BELL.OUT" library="kevin" deviceset="LSP10" device="" value="BELL">
+<attribute name="BOM" value="EXCLUDE"/>
 <attribute name="DNP" value="T"/>
 <attribute name="PARTNO" value="22-28-4012"/>
 </part>
@@ -4219,6 +4228,7 @@ This is the mechanical footprint for a #4 phillips button head screw. Use the ke
 <part name="GND10" library="supply1" deviceset="GND" device=""/>
 <part name="P+6" library="supply1" deviceset="+5V" device=""/>
 <part name="ICSP" library="kevin" deviceset="PIC_ICSP" device="_RA">
+<attribute name="BOM" value="EXCLUDE"/>
 <attribute name="DNP" value="T"/>
 <attribute name="PARTNO" value="68016-106HLF"/>
 </part>
@@ -4338,15 +4348,19 @@ This is the mechanical footprint for a #4 phillips button head screw. Use the ke
 <instance part="GND3" gate="1" x="210.82" y="139.7"/>
 <instance part="J5" gate="G$1" x="116.84" y="35.56">
 <attribute name="PARTNO" x="116.84" y="35.56" size="1.778" layer="96" display="off"/>
+<attribute name="BOM" x="116.84" y="35.56" size="1.778" layer="96" display="off"/>
+<attribute name="DNP" x="116.84" y="35.56" size="1.778" layer="96" display="off"/>
 </instance>
 <instance part="GND4" gate="1" x="127" y="27.94" rot="MR0"/>
 <instance part="J3" gate="G$1" x="78.74" y="58.42" smashed="yes" rot="R180">
 <attribute name="DNP" x="78.74" y="58.42" size="1.778" layer="96" display="off"/>
 <attribute name="PARTNO" x="78.74" y="58.42" size="1.778" layer="96" display="off"/>
+<attribute name="BOM" x="78.74" y="58.42" size="1.778" layer="96" rot="R180" display="off"/>
 </instance>
 <instance part="J4" gate="G$1" x="68.58" y="38.1" smashed="yes" rot="MR0">
 <attribute name="DNP" x="68.58" y="38.1" size="1.778" layer="96" display="off"/>
 <attribute name="PARTNO" x="68.58" y="38.1" size="1.778" layer="96" display="off"/>
+<attribute name="BOM" x="68.58" y="38.1" size="1.778" layer="96" rot="MR0" display="off"/>
 </instance>
 <instance part="GP5" gate="G$1" x="76.2" y="101.6" smashed="yes">
 <attribute name="DNP" x="76.2" y="101.6" size="1.778" layer="96" display="off"/>
@@ -4367,18 +4381,22 @@ This is the mechanical footprint for a #4 phillips button head screw. Use the ke
 <instance part="LAMP2.OUT" gate="1" x="86.36" y="101.6" smashed="yes" rot="R270">
 <attribute name="DNP" x="86.36" y="101.6" size="1.778" layer="96" display="off"/>
 <attribute name="PARTNO" x="86.36" y="101.6" size="1.778" layer="96" display="off"/>
+<attribute name="BOM" x="86.36" y="101.6" size="1.778" layer="96" rot="R270" display="off"/>
 </instance>
 <instance part="LAMP1.OUT" gate="1" x="86.36" y="99.06" smashed="yes" rot="R270">
 <attribute name="DNP" x="86.36" y="99.06" size="1.778" layer="96" display="off"/>
 <attribute name="PARTNO" x="86.36" y="99.06" size="1.778" layer="96" display="off"/>
+<attribute name="BOM" x="86.36" y="99.06" size="1.778" layer="96" rot="R270" display="off"/>
 </instance>
 <instance part="TRIGGER.IN" gate="1" x="86.36" y="96.52" smashed="yes" rot="R270">
 <attribute name="DNP" x="86.36" y="96.52" size="1.778" layer="96" display="off"/>
 <attribute name="PARTNO" x="86.36" y="96.52" size="1.778" layer="96" display="off"/>
+<attribute name="BOM" x="86.36" y="96.52" size="1.778" layer="96" rot="R270" display="off"/>
 </instance>
 <instance part="BELL.OUT" gate="1" x="86.36" y="93.98" smashed="yes" rot="R270">
 <attribute name="DNP" x="86.36" y="93.98" size="1.778" layer="96" display="off"/>
 <attribute name="PARTNO" x="86.36" y="93.98" size="1.778" layer="96" display="off"/>
+<attribute name="BOM" x="86.36" y="93.98" size="1.778" layer="96" rot="R270" display="off"/>
 </instance>
 <instance part="GND2" gate="1" x="60.96" y="30.48"/>
 <instance part="P+1" gate="1" x="30.48" y="53.34" smashed="yes">
@@ -4404,6 +4422,7 @@ This is the mechanical footprint for a #4 phillips button head screw. Use the ke
 <attribute name="NAME" x="17.78" y="49.022" size="1.778" layer="95"/>
 <attribute name="DNP" x="17.78" y="27.94" size="1.778" layer="96" display="off"/>
 <attribute name="PARTNO" x="17.78" y="27.94" size="1.778" layer="96" display="off"/>
+<attribute name="BOM" x="17.78" y="27.94" size="1.778" layer="96" display="off"/>
 </instance>
 <instance part="J2" gate="G$1" x="15.24" y="160.02">
 <attribute name="PARTNO" x="15.24" y="160.02" size="1.778" layer="96" display="off"/>
@@ -4883,9 +4902,9 @@ This is the mechanical footprint for a #4 phillips button head screw. Use the ke
 <approved hash="104,1,27.94,88.9,IC3,VSS,GND,,,"/>
 <approved hash="104,1,27.94,40.64,ICSP,VSS,GND,,,"/>
 <approved hash="104,1,27.94,43.18,ICSP,VDD,+5V,,,"/>
-<approved hash="117,1,54.61,88.9,GP0,,,,,"/>
-<approved hash="117,1,59.69,43.18,GP1,,,,,"/>
-<approved hash="117,1,58.42,96.52,GP3,,,,,"/>
+<approved hash="115,1,54.61,88.9,GP0,,,,,"/>
+<approved hash="115,1,59.69,43.18,GP1,,,,,"/>
+<approved hash="115,1,58.42,96.52,GP3,,,,,"/>
 </errors>
 </schematic>
 </drawing>
