@@ -1,0 +1,17 @@
+Qty	Value	Part Num	Package	Parts	Mfg Name	VID	Vendor Part Num	Description	Customer Ref	XREF
+1	0.1uF	21RZ310-RC	C025-024X044	C3	Xicon	ME	21RZ310-RC	Multilayer Ceramic Capacitors (MLCC) - Leaded .1uF 50volts Z5U 20% 2.5mm L/S	*	REF6
+3	1N5819	1N5819	DO41-10	D1, D2, D3	Fairchild Semiconductor	ME	512-1N5819	Schottky (Diodes & Rectifiers) Schottky Barrier	*	REF17
+5	1k	299-1K-RC	0207/10	R1, R3, R4, R5, R6	Xicon	ME	299-1K-RC	Carbon Film Resistors - Through Hole 1.0Kohms 0.05	*	REF9
+1	10k	299-10K-RC	0207/10	R2	Xicon	ME	299-10K-RC	Carbon Film Resistors - Through Hole 10Kohms 5%	*	REF8
+1	22uF	EEU-FR1H220	E2-5	C1	Panasonic	ME	667-EEU-FR1H220	Aluminum Electrolytic Capacitors - Leaded 50VDC 22uF 5x11mm LS2mm	*	REF13
+1	220uF	EEU-FR1C221	E2,5-6,3	C2	Panasonic	ME	667-EEU-FR1C221	Aluminum Electrolytic Capacitors - Leaded 16VDC 220uF 6.3x11.2mm LS2.5mm	*	REF7
+1	680uH	RLB0608-681KL	RLB0608	L1	Bourns	ME	652-RLB0608-681KL	Power Inductors 680uH 10% 125mA	*	REF16
+1	EXT	22-27-2031	MOLEX-1X3_LOCK	J5	Molex	ME	538-22-27-2031	Headers & Wire Housings 3C STR HEADER W/FRLK	*	REF22
+1	LM2574N-2-5.0	LM2574N-5G	DIL8	IC1	On Semiconductor	ME	863-LM2574N-5G	Switching Converters, Regulators & Controllers 5V .5A PWR SW REG	*	REF10
+1	LTV-816	LTV-816	DIL04	IC2	Lite-On	ME	859-LTV-816	Transistor Output Optocouplers Optocoupler Phototrans	*	REF12
+1	MAST	26-60-5080	KK-156-8-RA	J1	Molex	ME	538-26-60-5080	Headers & Wire Housings R/A PCB HDR 8P TIN FRICTION LOCK	*	REF19
+3	NTD4906N-35G	NTD4906N-35G	I-PAK_STRAIGHT_LEAD	Q1, Q2, Q3	On Semiconductor	ME	863-NTD4906N-35G	MOSFET NFET DPAK 30V 54A 5.5 mOhm	*	REF4
+1	PIC12C508JN	PIC12F508-I/P	DIL8	IC3	Microchip	ME	579-PIC12F508-I/P	Microcontrollers (MCU) 1 KB 25 RAM 6 I/O Ind Temp PDIP8	*	REF11
+1	POWER	26-60-5020	KK-156-2-RA	J2	Molex	ME	538-26-60-5020	Headers & Wire Housings R/A PCB HDR 2P TIN FRICTION LOCK	*	REF18
+1	SSL-LX3044GD	SSL-LX3044GD	LED3MM	LED1	Lumex	ME	696-SSL-LX3044GD	Standard LED - Through Hole 3mm Short Lens Green	*	REF15
+3	SSL-LX3044HD	SSL-LX3044HD	LED3MM	LED2, LED3, LED4	Lumex	ME	696-SSL-LX3044HD	Standard LED - Through Hole 3mm Short Lens Red	*	REF14
