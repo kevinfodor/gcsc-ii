@@ -63,24 +63,32 @@ extern "C"
 // Timebase
 #define TMR0_TIMEOUT_USEC (10000) // 10.000 msec
 
+// Custom timeout definitions
+#define DEBOUNCE_TIMEOUT_USEC        (200000) // 200 msec = 0.2 sec
+#define LAMP_TIMEOUT_USEC            (700000) // 700 msec = 0.7 sec
+#define BELL_TIMEOUT_USEC            (700000) // 700 msec = 0.7 sec
+#define ACTIVE_LAMP_TIMEOUT_USEC   (30000000) // 30 sec
+#define ACTIVE_BELL_TIMEOUT_USEC   (30000000) // 30 sec
+#define ACTIVE_TIMEOUT_USEC        (30000000) // 30 sec
+#define LONG_PRESS_TIMEOUT_USEC     (1500000) // 1.5 sec
+
 // Common time definitions
 #define USEC_PER_SEC (1000000)
 #define MSEC_PER_USEC (1000)
 
-// Timeout definitions
+// Timeout counter definitions (do not modify)
 #define EXPIRED (0)
-#define DEBOUNCE_TIMEOUT_USEC        (200000) // 200 msec = 0.2 sec
-#define LAMP_TIMEOUT_USEC            (700000) // 700 msec = 0.7 sec
-#define ACTIVE_TIMEOUT_USEC        (30000000) // 30 sec
-#define LONG_PRESS_TIMEOUT_USEC     (1500000) // 1.5 sec
-
-// Timeout counter definitions
 #define DEBOUNCE_TIMEOUT_COUNT (DEBOUNCE_TIMEOUT_USEC / USEC_PER_TICK)
 #define LONG_PRESS_TIMEOUT_COUNT ( \
     (LONG_PRESS_TIMEOUT_USEC / USEC_PER_TICK) \
             - DEBOUNCE_TIMEOUT_COUNT)
 #define ACTIVE_TIMEOUT_COUNT (ACTIVE_TIMEOUT_USEC / USEC_PER_TICK)
 #define LAMP_TIMEOUT_COUNT (LAMP_TIMEOUT_USEC / USEC_PER_TICK)
+#define BELL_TIMEOUT_COUNT (BELL_TIMEOUT_USEC / USEC_PER_TICK)
+#define ACTIVE_LAMP_TIMEOUT_COUNT (ACTIVE_TIMEOUT_COUNT - \
+    (ACTIVE_LAMP_TIMEOUT_USEC / USEC_PER_TICK))
+#define ACTIVE_BELL_TIMEOUT_COUNT (ACTIVE_TIMEOUT_COUNT - \
+    (ACTIVE_BELL_TIMEOUT_USEC / USEC_PER_TICK))
 
 // Output mask defintions
 #define PORT_MASK (LAMP1 | LAMP2 | BELL)

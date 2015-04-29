@@ -82,30 +82,45 @@ static uint8_t output = ALL_OFF; // buffer for output signals
 static debouncer_t trigger;
 static uint16_t active_cnt;
 static uint8_t lamp_cnt;
+static uint8_t bell_cnt;
 static uint8_t lpress_cnt;
 static bool pressed;
 
 // Prototypes
-static void toggle(void);
+static void handler(void);
 
 /*
  * Implementation
  */
 
-/*! \brief toggle
+/*! \brief handler
  */
-static void toggle(void) {
+static void handler(void) {
 
-    // Toggle lamps and bell as needed
-    if (EXPIRED == lamp_cnt) {
-        // Toggle LAMPs and signal BELL
-        output = (((output ^ (LAMP1 | LAMP2)) | BELL) & PORT_MASK);
+    // Toggle lamps as needed
+    if ((EXPIRED == lamp_cnt) &&
+            (ACTIVE_LAMP_TIMEOUT_COUNT < active_cnt)) {
+        // Toggle LAMPs
+        output = ((output ^ (LAMP1 | LAMP2)) & PORT_MASK);
 
         // Reset lamp timer
         lamp_cnt = LAMP_TIMEOUT_COUNT;
     } else {
         // decrement lamp timeout
         lamp_cnt--;
+    }
+
+    // Signal bell as needed
+    if ((EXPIRED == bell_cnt) &&
+            (ACTIVE_BELL_TIMEOUT_COUNT < active_cnt)) {
+        // Set BELL
+        output |= BELL;
+
+        // Reset bell timer
+        bell_cnt = BELL_TIMEOUT_COUNT;
+    } else {
+        // decrement bell timeout
+        bell_cnt--;
 
         // Clear BELL
         output &= ~BELL;
@@ -144,11 +159,14 @@ void gcsc_ii(void) {
                 output = ALL_OFF;
 
                 if (pressed) {
-                    // Turn on LAMP1 and BELL
-                    output = (LAMP1 | BELL);
+                    // Turn on LAMP1 and Strike the BELL
+                    output = ((LAMP1 | BELL) & PORT_MASK);
 
                     // Load lamp timeout
                     lamp_cnt = LAMP_TIMEOUT_COUNT;
+
+                    // Load bell timeout
+                    bell_cnt = BELL_TIMEOUT_COUNT;
 
                     // Load active timeout
                     active_cnt = ACTIVE_TIMEOUT_COUNT;
@@ -166,8 +184,6 @@ void gcsc_ii(void) {
 
                 // Check if active timer is running
                 if (EXPIRED != active_cnt) {
-                    active_cnt--;
-
                     // Is button still held down?
                     if (debouncer_active == trigger.current_state) {
                         // Is button long pressed?
@@ -178,12 +194,21 @@ void gcsc_ii(void) {
                             lpress_cnt--;
                         }
                     }
+                    else
+                    {
+                        // Any release of the button restarts timer
+                        lpress_cnt = LONG_PRESS_TIMEOUT_COUNT;
+                    }
                 } else {
                     // cancel signal
                     state = controller_disabled;
                 }
 
-                // Fall thru...
+                // Decrement active count
+                if (EXPIRED != active_cnt)
+                    active_cnt--;
+
+            // Fall thru...
 
             case controller_long:
 
@@ -193,7 +218,8 @@ void gcsc_ii(void) {
                     state = controller_disabled;
                 }
 
-                toggle();
+                // Run signal handler
+                handler();
 
                 break;
 
