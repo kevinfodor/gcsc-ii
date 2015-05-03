@@ -4,4 +4,10 @@ Revision B.1
 No electrical changes.
 Upgrade to Eagle 6.5.0
 Cleaned-up silkscreen and some traces.
+
+Revision B.2
+No electrical changes
+Upgrade to Eagle 6.6.0
+Added silkscreen markings for LED anodes
+Added silkscreen markings for MOSFET tab placement
 </language en>

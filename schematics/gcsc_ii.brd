@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.5.0">
+<eagle version="6.6.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="yes"/>
@@ -23,7 +23,7 @@
 <layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="25" name="tNames" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="no" active="yes"/>
 <layer number="27" name="tValues" color="7" fill="1" visible="no" active="yes"/>
 <layer number="28" name="bValues" color="7" fill="1" visible="no" active="yes"/>
 <layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
@@ -36,11 +36,11 @@
 <layer number="36" name="bGlue" color="7" fill="5" visible="no" active="yes"/>
 <layer number="37" name="tTest" color="7" fill="1" visible="no" active="yes"/>
 <layer number="38" name="bTest" color="7" fill="1" visible="no" active="yes"/>
-<layer number="39" name="tKeepout" color="4" fill="11" visible="yes" active="yes"/>
-<layer number="40" name="bKeepout" color="1" fill="11" visible="yes" active="yes"/>
-<layer number="41" name="tRestrict" color="4" fill="10" visible="yes" active="yes"/>
-<layer number="42" name="bRestrict" color="1" fill="10" visible="yes" active="yes"/>
-<layer number="43" name="vRestrict" color="2" fill="10" visible="yes" active="yes"/>
+<layer number="39" name="tKeepout" color="4" fill="11" visible="no" active="yes"/>
+<layer number="40" name="bKeepout" color="1" fill="11" visible="no" active="yes"/>
+<layer number="41" name="tRestrict" color="4" fill="10" visible="no" active="yes"/>
+<layer number="42" name="bRestrict" color="1" fill="10" visible="no" active="yes"/>
+<layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="yes"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
 <layer number="45" name="Holes" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
@@ -48,8 +48,8 @@
 <layer number="48" name="Document" color="7" fill="1" visible="no" active="yes"/>
 <layer number="49" name="Reference" color="7" fill="1" visible="no" active="yes"/>
 <layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
-<layer number="51" name="tDocu" color="6" fill="1" visible="no" active="yes"/>
-<layer number="52" name="bDocu" color="7" fill="1" visible="no" active="yes"/>
+<layer number="51" name="tDocu" color="6" fill="1" visible="yes" active="yes"/>
+<layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="53" name="tGND_GNDA" color="7" fill="9" visible="no" active="no"/>
 <layer number="54" name="bGND_GNDA" color="1" fill="9" visible="no" active="no"/>
 <layer number="56" name="wert" color="7" fill="1" visible="no" active="no"/>
@@ -145,7 +145,7 @@
 <text x="40.64" y="30.988" size="1.016" layer="21">BELL</text>
 <circle x="3.81" y="41.91" radius="2.83980625" width="0.6096" layer="42"/>
 <circle x="3.81" y="41.91" radius="2.83980625" width="0.6096" layer="41"/>
-<text x="40.64" y="34.29" size="1.4224" layer="21" ratio="10">Rev-B.1</text>
+<text x="40.64" y="34.29" size="1.4224" layer="21" ratio="10">Rev-B.2</text>
 <dimension x1="-1.27" y1="45.72" x2="-1.27" y2="0" x3="-10.160003125" y3="22.86" textsize="3.5" layer="51" unit="inch"/>
 <text x="29.718" y="27.051" size="1.016" layer="21">POWER</text>
 <wire x1="0.1016" y1="45.72" x2="0.1016" y2="26.67" width="0.2032" layer="21"/>
@@ -206,8 +206,15 @@
 <rectangle x1="35.306" y1="18.796" x2="37.465" y2="26.289" layer="41"/>
 <rectangle x1="34.29" y1="17.653" x2="35.306" y2="27.813" layer="41"/>
 <rectangle x1="34.29" y1="19.05" x2="38.735" y2="26.67" layer="42"/>
-<text x="62.23" y="6.985" size="0.8128" layer="21" font="vector" ratio="10" rot="SR90">08-23-2013</text>
+<text x="62.23" y="6.985" size="0.8128" layer="21" font="vector" ratio="10" rot="SR90">05-01-2015</text>
 <text x="7.874" y="39.37" size="0.8128" layer="21" rot="R90">J5</text>
+<text x="29.21" y="25.4" size="1.778" layer="21" ratio="15">+</text>
+<text x="39.37" y="26.67" size="1.778" layer="21" ratio="15">+</text>
+<text x="46.99" y="26.67" size="1.778" layer="21" ratio="15">+</text>
+<text x="54.61" y="26.67" size="1.778" layer="21" ratio="15">+</text>
+<wire x1="43.815" y1="21.59" x2="43.815" y2="16.51" width="0.3048" layer="21"/>
+<wire x1="51.435" y1="21.59" x2="51.435" y2="16.51" width="0.3048" layer="21"/>
+<wire x1="59.055" y1="21.59" x2="59.055" y2="16.51" width="0.3048" layer="21"/>
 </plain>
 <libraries>
 <library name="kevin">

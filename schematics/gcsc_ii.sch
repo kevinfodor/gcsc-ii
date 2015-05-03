@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.5.0">
+<eagle version="6.6.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -11239,7 +11239,7 @@ This is the mechanical footprint for a #4 phillips button head screw. Use the ke
 <text x="154.94" y="124.46" size="2.54" layer="91">Input Trigger</text>
 <text x="149.86" y="50.8" size="2.54" layer="91">Output Stage</text>
 <text x="17.78" y="15.24" size="2.54" layer="91">ICSP(PicKit3) Connector (optional)</text>
-<text x="238.76" y="7.62" size="2.54" layer="91" ratio="10">B.1</text>
+<text x="238.76" y="7.62" size="2.54" layer="91" ratio="10">B.2</text>
 <text x="149.86" y="25.4" size="1.778" layer="91">Kevin M. Fodor</text>
 <text x="78.74" y="40.64" size="1.778" layer="91">Breakout Jumpers</text>
 <text x="63.5" y="104.14" size="1.778" layer="91">Isolation Jumpers</text>
